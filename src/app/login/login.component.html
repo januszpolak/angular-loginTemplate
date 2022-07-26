@@ -1,6 +1,7 @@
 <div fxLayoutAlign="center center" fxFlexFill>
     <mat-card fxFlex="25">
-        <form class="example-form">
+        <mat-toolbar color="primary">Login Page</mat-toolbar>
+        <form class="example-form" fxLayoutAlign="stretch" fxLayout="column">
             <mat-form-field >
               <mat-label>User name</mat-label>
               <input matInput>
@@ -10,6 +11,7 @@
                 <mat-label>Password</mat-label>
                 <input matInput type="password">
               </mat-form-field>
+              <button mat-button type="submit" color="warn">Login</button>
           </form>
           
     </mat-card>
