@@ -1,5 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 
+interface Language {
+  value: string;
+  viewValue: string;
+}
 
 @Component({
   selector: 'app-login',
@@ -8,6 +12,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginComponent implements OnInit {
   hide = true;
+
+  languages: Language[] = [
+    {value: 'polski', viewValue: 'polski'},
+    {value: 'english', viewValue: 'english'},
+  ];
 
   constructor() { }
 

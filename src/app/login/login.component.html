@@ -17,5 +17,15 @@
               </mat-form-field>
               <button mat-button type="submit" color="warn">Login</button>
           </form>
-    </mat-card>
+
+          <mat-toolbar color="#385D7B">Languages</mat-toolbar>
+          <mat-form-field appearance="fill">
+            <mat-label>Language</mat-label>
+            <mat-select>
+              <mat-option *ngFor="let language of languages" [value]="language.value">
+                {{language.viewValue}}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+          </mat-card>
 </div>
