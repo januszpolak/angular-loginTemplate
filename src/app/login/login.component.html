@@ -5,7 +5,7 @@
           <!-- Field for user name -->
             <mat-form-field > 
               <mat-label>User name</mat-label>
-              <input matInput>
+              <input matInput id="username" name="username" #username>
             </mat-form-field>
           <!-- Field for password -->
             <mat-form-field >
@@ -15,7 +15,7 @@
                   <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
                 </button>
               </mat-form-field>
-              <button mat-button type="submit" color="warn">Login</button>
+              <button mat-button type="submit" color="warn" (click)="submit(username.value)">Login</button>
           </form>
 
           <mat-toolbar color="#385D7B">Languages</mat-toolbar>
