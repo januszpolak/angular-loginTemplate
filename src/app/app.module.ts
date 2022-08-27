@@ -13,6 +13,9 @@ import {MatCardModule} from '@angular/material/card';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatIconModule} from '@angular/material/icon';
 import { MatSelectModule } from '@angular/material/select';
+import {MatSlideToggleModule} from '@angular/material/slide-toggle';
+
+
 import { LoginComponent } from './login/login.component';
 
 @NgModule({
@@ -32,7 +35,8 @@ import { LoginComponent } from './login/login.component';
     MatCardModule,
     MatToolbarModule,
     MatIconModule,
-    MatSelectModule
+    MatSelectModule,
+    MatSlideToggleModule
   ],
   providers: [],
   bootstrap: [AppComponent]

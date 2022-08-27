@@ -1,16 +1,16 @@
-<div fxLayoutAlign="center center" fxFlexFill>
+<div fxLayoutAlign="center center" fxFlexFill id="div ">
     <mat-card fxFlex="25">
         <mat-toolbar color="#385D7B">Login Page</mat-toolbar>
         <form class="example-form" fxLayoutAlign="stretch" fxLayout="column">
           <!-- Field for user name -->
             <mat-form-field > 
               <mat-label>User name</mat-label>
-              <input matInput id="username" name="username" #username>
+              <input matInput id="username" name="username" required minlenght="2" maxlength="30" ngModel name="username" #username="ngModel">
             </mat-form-field>
           <!-- Field for password -->
             <mat-form-field >
                 <mat-label>Password</mat-label>
-                <input matInput [type]="hide ? 'password' : 'text'">
+                <input matInput [type]="hide ? 'password' : 'text'" id="password" name="password" #password required minlenght="2">
                 <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
                   <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
                 </button>
@@ -20,7 +20,6 @@
 
           <mat-toolbar color="#385D7B">Languages</mat-toolbar>
           <mat-form-field appearance="fill">
-            <mat-label>Language</mat-label>
             <mat-select>
               <mat-option *ngFor="let language of languages" [value]="language.value">
                 {{language.viewValue}}
@@ -28,4 +27,7 @@
             </mat-select>
           </mat-form-field>
           </mat-card>
+          
 </div>
+<mat-slide-toggle (change)="onChange()">Slide me to apply dark mode!</mat-slide-toggle>
+

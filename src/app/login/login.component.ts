@@ -13,6 +13,8 @@ interface Language {
 export class LoginComponent implements OnInit {
   hide = true;
   username: string = "";
+  password: string = "";
+  f:any = '';
 
   languages: Language[] = [
     {value: 'polski', viewValue: 'polski'},
@@ -27,6 +29,12 @@ export class LoginComponent implements OnInit {
       
     }
     
+  }
+
+  //onChange method to toggle class by slider (only JS)) 
+  onChange() {
+    console.log("ok");
+    const div = document.getElementById("div")?.classList.toggle("dark");
   }
 
   constructor() { }
